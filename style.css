@@ -1,0 +1,486 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  h1 {
+    margin: 0;
+    font-size: xx-large;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+h2 h3 a {
+  font-family: "Open Sans", sans-serif;
+}
+
+
+/* ---------------  whatsapp2 -------------------*/
+
+.whatsapp-greeting {
+  color: black;
+  background-color: white;
+  z-index: 5000000;
+ 
+  right: 90px;
+  bottom: 30px;
+  height: 30px;
+  width: 130px;
+  border-radius: 15px;
+  text-align: center;
+  padding: 5px;
+  font-size: large;
+  box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+/* Estilo inicial del greeting que está oculto */
+.whatsapp-greeting {
+  display: none;
+  position: fixed;
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(5px); /* Puedes ajustar la distancia según tus necesidades */
+  }
+}
+
+.whatsapp-icon  {
+  /* Otros estilos... */
+  animation: moveUpDown 2s infinite; /* Puedes ajustar la duración según tus necesidades */
+}
+
+/* Estilos para el botón de WhatsApp fijo en la esquina inferior derecha */
+#whatsappBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 99999; /* Asegura que esté por encima de otros elementos */
+  background-image: url(/img/WhatsApp_icon.png.webp);
+  background-repeat: no-repeat;
+  background-size: 80%; /* Aquí ajusta el tamaño según tus necesidades */
+  background-position: center; /* Centro la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  
+
+.mensaje__whatsapp {
+  height: 340px;
+  width: 320px;
+  border-radius: 10px;
+  background-color: #e6ddd4;
+  position:absolute;
+  z-index: 50;
+  bottom: 0;
+  right: 30px;
+  position: fixed;
+  bottom: 95px;
+  overflow: hidden;  
+  
+  box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.2);
+  
+}
+
+
+
+.mensaje__whatsapp img {
+  transform: scale(1.6);
+  opacity: 11%;
+  
+}
+
+.mensaje__whatsapp__globo {
+  /* background-color: #000000; */
+  height: 40px;
+  width: 260px;
+  border-radius: 10px;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+ 
+}
+
+.mensaje__whatsapp__globo_1 {
+  
+  border-left: 25px solid transparent;
+  border-right: 0px solid transparent;
+  border-top: 20px solid rgb(255, 255, 255);    
+  z-index: 3;
+  position: absolute;
+  left: 5px;
+  bottom: 15px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0px, 0.2)
+  
+}
+
+
+.mensaje__whatsapp__globo_2 {
+  background-color: rgb(255, 255, 255); 
+  height: 15px;
+  width: 200px;
+  z-index: 3;
+  border-radius: 10px; 
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: small;
+  padding: 15px;
+  color: rgb(119, 116, 116);
+ 
+  font-family: "Poppins", sans-serif;
+  font-weight: 1000;
+  font-style: normal;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1)
+}
+
+.mensaje__whatsapp__x {
+  position: absolute;
+  background-color: #3a3939;
+  color: #fbfdff;
+  height: 26px;
+  width: 26px;
+  border-radius: 15px;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 8px;
+  top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;   
+  cursor: pointer;
+  transition: background-color 0.5s; 
+  border: none;
+  z-index: 500;
+  text-decoration: none;
+}
+
+.mensaje__whatsapp__x:hover {
+  background-color: red; /* Cambia el color de fondo en hover */
+}
+
+.mensaje__whatsapp__x:not(:hover) {
+  background-color: #3a3939; /* Vuelve al color original cuando no está en hover */
+}
+.dialogo.hidden {
+  display: none;
+}
+
+
+.mensaje__whatsapp__dialogo {
+  position: relative;
+  background-color: #f5ecec;
+  height: 70px;
+  width: 320px;
+  z-index: 5;
+  opacity: 100%;
+  top: 270px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items:center;
+    
+}
+
+#dialogo {
+  z-index: 50000;
+}
+.mensaje__whatsapp__chat {
+  position: relative;
+  background-color: #ffffff;
+  z-index: 500;
+  height: 20px;
+  width: 200px;
+  border-radius: 25px;
+  border: none;
+  
+}
+
+
+
+.mensaje-input {
+  text-align: center;
+  text-align:start;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  padding: 15px 20px;
+}
+
+.mensaje-input:focus {
+  outline: none;
+  border: 1px solid #4CAF50;
+}
+.mensaje__whatsapp__enviar {
+  position: relative;
+  background-color: #30d654;
+  z-index: 500;
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  background-image: url(/img/boton-enviar.png);
+  background-repeat: no-repeat;
+  background-size: 50%; /* Aquí ajusta el tamaño según tus necesidades */
+  background-position: center; /* Centro la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+
+}
+
+
+
+
+  /*---------- NAVEGADOR------------ */
+
+  .navegacion {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0px;
+    align-items: center;
+    position: fixed;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: small;
+    z-index: 500;
+  }
+  .navegacion a {
+    
+    text-decoration: none; /* Elimina el subrayado predeterminado en los enlaces */
+    position: relative; /* Establece posición relativa para los elementos a */
+}
+
+.navegacion a::before,.navegacion a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    top: 20px;
+    
+    transition: all 0.3s ease;
+}
+.navegacion a:hover::before,
+.navegacion a:hover::after {
+    width: 60%; /* Cambia el valor según tus necesidades */
+}
+.navegacion a::before {
+    left: 50%;
+    background-color: rgb(243, 162, 56);
+    transform-origin: right;
+}
+
+.navegacion a::after {
+    right: 50%;
+    background-color: rgb(243, 162, 56);
+    transform-origin: left;
+}
+
+  .logo {
+    height: 180px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 25px;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .menu {
+    text-decoration: none;
+    color: rgb(112, 231, 205);
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+  }
+  
+  .menu:hover {
+    color: rgba(243, 162, 56, 0.623);
+    text-shadow: 0 0 2px rgba(243, 162, 56, 0.253);
+  }
+  
+  .activo {
+    color: rgb(243, 162, 56);
+    text-shadow: 0 0 1px rgb(243, 162, 56);
+  }
+
+
+
+/* ----------PRESENTACION----------- */
+
+  
+  .presentacion {
+    background-image: url(./recursos/fondo\ 1.png);
+    height: 750px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    font-family: "Open Sans", sans-serif;
+   
+  }
+ 
+  .presentacion p {
+    font-size: x-large;
+  }
+
+
+
+
+
+  /* ---------SERVICIOS---------- */
+
+  
+/* SERVICIOS */
+
+.container-servicios h3 {
+  text-transform: uppercase;
+  font-size: medium;
+}
+
+.container-servicios {
+  background: linear-gradient(to bottom, rgb(10, 20, 31) 0%, rgb(30, 60, 93) 100%);
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+.container-servicios .heading {
+  text-align: center;
+  padding-bottom: 25px;
+  color: #ffffff;
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  text-transform: uppercase;
+  
+}
+.container-servicios .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(270px, 1fr));
+  gap: 30px;
+  width: 80%;
+  margin: 0 auto;
+}
+.container-servicios .box-container .box-servicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: #e0f0f3;
+  text-align: center;
+  padding: 30px 20px;
+}
+.container-servicios .box-container .box-servicios img {
+  height: 80px;
+}
+.container-servicios .box-container .box-servicios h2 {
+  font-size: 22px;
+  padding: 10px;
+ 
+}
+.container-servicios .box-container .box-servicios p {
+  color: #212121;
+}
+.container-servicios .box-container .box-servicios .boton {
+  display: inline-block;
+}
+.container-servicios .box-container .box-servicios .boton:hover {
+  letter-spacing: 1px;
+}
+.container-servicios .box-container .box-servicios:hover{
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  transform: scale(1.02);
+}
+.servicios__information {
+  display: flex;
+  justify-content: space-around;    
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .container-servicios {
+      padding: 20px;
+  }
+  .container-servicios .box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-bottom: 50px;
+  width: 100%;
+  }
+
+  .container-servicios .box-container .box-servicios {
+      margin-bottom: 15px;
+  }
+
+  .container-servicios .box-container .box-servicios:last-child {
+      margin-bottom: 0;
+  }
+
+  .container-servicios .box-container .box-servicios:hover {
+      box-shadow: none;
+      transform: none;
+  }
+
+  .container-servicios .box-container .box-servicios .boton:hover {
+      letter-spacing: 0;
+  }
+}
+@media (max-width: 480px) {
+  .container-servicios {
+      padding: 10px;
+  }
+
+  .container-servicios .box-container .box-servicios {
+      margin-bottom: 15px;
+  }
+
+  .container-servicios .box-container .box-servicios:last-child {
+      margin-bottom: 0;
+  }
+
+  .container-servicios .box-container .box-servicios:hover {
+      box-shadow: none;
+      transform: none;
+  }
+
+  .container-servicios .box-container .box-servicios .boton:hover {
+      letter-spacing: 0;
+  }
+  .servicios__information {
+      display: block;
+  }
+}
+

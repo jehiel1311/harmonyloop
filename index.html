@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap">
+  <link rel="stylesheet" href="ruta/a/montserrat.css">
+  <title>Harmony Loop</title>
+</head>
+<body>
+
+  <!-- Botón de WhatsApp -->
+  
+ <div class="whatsapp-container">
+  <div id="whatsappBtn" class="whatsapp-icon" onmouseover="mostrarGreeting()" onclick="mostrarDialogo()" onmouseout="ocultarGreeting()"></div>
+  <div class="whatsapp-greeting" id="greeting">Hello :)</div>
+</div>
+
+<div id="dialogo" class="mensaje__whatsapp dialogo hidden">
+  <div class="mensaje__whatsapp__globo">
+      <div class="mensaje__whatsapp__globo_1"></div>
+      <div class="mensaje__whatsapp__globo_2">
+          <h4>How can i help you ? ;) </h4>
+      </div>
+  </div>
+  <a class="mensaje__whatsapp__x" onclick="cerrarDialogo()">x</a>
+  <div class="mensaje__whatsapp__dialogo">
+      <textarea id="mensaje" class="mensaje-input mensaje__whatsapp__chat" placeholder="Your messenger here"></textarea>
+      <button class="enviar-btn mensaje__whatsapp__enviar" onclick="enviarWhatsApp()"></button>
+  </div>
+  <div>
+      <img src="/img/fondo chat.png">
+  </div>
+</div>
+
+
+  <nav class="navegacion">
+    <img src="./recursos/logo.png" class="logo">
+
+    <ul class="nav-menu">
+      <li><a href="#" class="menu activo">Inicio</a></li>
+      <li><a href="#" class="menu">Servicios</a></li>
+      <li><a href="#" class="menu">Nosotros</a></li>
+      <li><a href="#" class="menu">Contacto</a></li>
+    </ul>
+
+  </nav>
+  <section class="presentacion">
+    <h1>Más que una web, un equipo!</h1>
+    <p>Creamos experiencias digitales únicas!</p>
+  </section>
+ 
+
+
+  <!-- Seccion servicios -->
+<section class="container-servicios">
+  <h2 class="heading">nuestros servicios</h2>
+  <div class="box-container">
+      <div class="box-servicios ">
+          <img src="/img/seccion servicios/servicios web.png" alt="">
+          <h3>Paginas Web</h3>
+          <p>Crea una presencia única en línea con los diseños web cautivadores de Harmony Loop. Desde sitios elegantes hasta experiencias de usuario intuitivas, destacamos tu marca en el mundo digital.</p>
+          <div class="servicios__information">
+              <div>
+                  <p>
+                  <i class="fa-regular fa-clock"></i>
+                      Duration 1-4hr</p>
+              </div>
+              <div>
+                  <p>
+                  <i class="fa-solid fa-people-group"></i>
+                  Group of up to 4
+                  </p>
+              </div>
+          </div>
+          <a href="servicios.html#tuktuk" class="boton" target="_blank">Start Now</a>
+      </div>
+      <div class="box-servicios">
+          <img src="/img/seccion servicios/servicios diseños grafico.png" alt="">
+          <h3>Diseños Graficos</h3>
+          <p>Dale vida a tu marca con el diseño gráfico distintivo de Harmony Loop. Logotipos memorables, materiales atractivos: cada elemento cuenta una historia única que destaca tu identidad</p>
+          <div class="servicios__information">
+              <div>
+                  <p>
+                  <i class="fa-regular fa-clock"></i>
+                  Duration 02:30hr</p>
+              </div>
+              <div>
+                  <p>
+                  <i class="fa-solid fa-people-group"></i>
+                  Group of up to 8
+                  </p>
+              </div>
+          </div>
+          <a href="servicios.html#bike" class="boton" target="_blank">Start Now</a>
+      </div>
+      <div class="box-servicios">
+          <img src="/img/seccion servicios/servicios audiovisual.png" alt="">
+          <h3>Produciones Audiovisuales</h3>
+          <p>Experimenta la magia del contenido visual y auditivo con Harmony Loop. Desde grabaciones profesionales hasta proyecciones impactantes, elevamos tus ideas a experiencias audiovisuales inolvidables</p>
+          <div class="servicios__information">
+              <div>
+                  <p>
+                  <i class="fa-regular fa-clock"></i>
+                  Duration 01:30-4hr</p>
+              </div>
+              <div>
+                  <p>
+                  <i class="fa-solid fa-people-group"></i>
+                  Group of up to 8
+                  </p>
+              </div>
+          </div>
+          <a href="servicios.html#walking" class="boton" target="_blank">Start Now</a>
+      </div>
+  </div>
+</section>
+
+  <footer>
+    <p>Copyright &copy; 2023</p>
+  </footer>
+<script src="/script.js"></script>
+</body>
+</html>
