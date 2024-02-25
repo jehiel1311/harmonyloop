@@ -71,7 +71,7 @@ h2 h3 a {
   cursor: pointer;
   box-shadow: 3px 4px 15px rgba(0, 0, 0, 0.2);
   z-index: 99999; /* Asegura que esté por encima de otros elementos */
-  background-image: url(/img/WhatsApp_icon.png.webp);
+  background-image: url(img/whatsapp-logo.webp);
   background-repeat: no-repeat;
   background-size: 80%; /* Aquí ajusta el tamaño según tus necesidades */
   background-position: center; /* Centro la imagen */
@@ -240,7 +240,7 @@ h2 h3 a {
   height: 50px;
   width: 50px;
   border-radius: 25px;
-  background-image: url(/img/boton-enviar.png);
+  background-image: url(img/boton-enviar.png);
   background-repeat: no-repeat;
   background-size: 50%; /* Aquí ajusta el tamaño según tus necesidades */
   background-position: center; /* Centro la imagen */
@@ -336,7 +336,7 @@ h2 h3 a {
 
   
   .presentacion {
-    background-image: url(./recursos/fondo\ 1.png);
+    background-image: url(recursos/fondo\ 1.png);
     height: 750px;
     background-position: center center;
     background-repeat: no-repeat;
