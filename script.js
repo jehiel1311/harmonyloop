@@ -1,5 +1,5 @@
 
-
+// -------------------------- WHATSAPP----------------------
 
 function mostrarDialogo() {
   var dialogo = document.getElementById('dialogo');
